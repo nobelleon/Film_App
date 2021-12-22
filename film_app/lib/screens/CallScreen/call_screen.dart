@@ -1,0 +1,132 @@
+import 'package:film_app/screens/CallScreen/Components/profile_pic_widget.dart';
+import 'package:film_app/screens/MessageScreen/message_screen.dart';
+import 'package:film_app/utils/sized_config.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
+class CallScreen extends StatelessWidget {
+  const CallScreen({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            SizedBox(
+              height: SizeConfig.heightMultiplier * 3,
+            ),
+            Text(
+              "Hallo, \n Anda sedang berbicara dengan Guide Maya",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: SizeConfig.textMultiplier * 2.5,
+                color: Colors.purple[400],
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            SizedBox(
+              height: SizeConfig.heightMultiplier * 10,
+            ),
+            // getar dering
+            Container(
+              height: SizeConfig.heightMultiplier * 30,
+              width: SizeConfig.widthMultiplier * 100,
+              child: ProfilePicWidget(),
+            ),
+            SizedBox(
+              height: SizeConfig.heightMultiplier * 2,
+            ),
+            Text(
+              "Guide Maya Indah Sari",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: SizeConfig.textMultiplier * 2.5,
+                  color: Colors.purple,
+                  fontWeight: FontWeight.w600),
+            ),
+            SizedBox(
+              height: SizeConfig.heightMultiplier * 2,
+            ),
+            Text(
+              "Berdering...",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.redAccent, fontWeight: FontWeight.w600),
+            ),
+            SizedBox(
+              height: SizeConfig.heightMultiplier * 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Tombol tutup telpon
+                GestureDetector(
+                  onTap: () {
+                    Get.back();
+                    // Navigator.pop(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) {
+                    //       return;
+                    //     },
+                    //   ),
+                    // );
+                  },
+                  child: Container(
+                    height: SizeConfig.heightMultiplier * 8,
+                    width: SizeConfig.widthMultiplier * 18,
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                          offset: Offset(4, 8),
+                          color: Colors.black26,
+                          blurRadius: 8)
+                    ], shape: BoxShape.circle, color: Colors.purple[400]),
+                    child: Icon(
+                      Icons.call_end,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: SizeConfig.widthMultiplier * 5,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    // Get.back();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return MessageScreen();
+                        },
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: SizeConfig.heightMultiplier * 8,
+                    width: SizeConfig.widthMultiplier * 18,
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                          offset: Offset(4, 8),
+                          color: Colors.black26,
+                          blurRadius: 8)
+                    ], shape: BoxShape.circle, color: Colors.white),
+                    child: Icon(
+                      MdiIcons.messageBulleted,
+                      color: Colors.grey.shade500,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 0 * .15,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
