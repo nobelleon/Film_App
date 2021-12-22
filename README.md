@@ -3,6 +3,7 @@
 
 Film App Made in Flutter.
 
+![Cinema21_1-horz](https://user-images.githubusercontent.com/76748114/147122275-d061622b-da11-4e42-ba79-f93a80e3eaff.jpg)
 
 ## Features
 
