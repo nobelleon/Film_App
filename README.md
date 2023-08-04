@@ -3,6 +3,8 @@
 
 Film App Made in Flutter.
 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=Nobelleon&label=Profile%20views&color=0e75b6&style=flat" alt="nobelleon" /> </p>
+
 ![Cinema21_1-horz](https://user-images.githubusercontent.com/76748114/147122275-d061622b-da11-4e42-ba79-f93a80e3eaff.jpg)
 
 ## Features
